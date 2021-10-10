@@ -1,19 +1,17 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-function Section() {
+function Section({ title, desc, bgImg, leftbtntext, rightBtntext }) {
   return (
-    <Wrap>
+    <Wrap bagImg={bgImg}>
       <ItemText>
-        <h1>Model S</h1>
-        <p>
-          Order Online for <a href="">Touchless Delivery</a>
-        </p>
+        <h1>{title}</h1>
+        <p>{desc}</p>
       </ItemText>
       <Buttons>
         <ButtonGroup>
-          <LeftButton>Custom Order</LeftButton>
-          <RightButton>Existing Inventory</RightButton>
+          <LeftButton>{leftbtntext}</LeftButton>
+          <RightButton>{rightBtntext}</RightButton>
         </ButtonGroup>
         <DownArrow src="https://cdn-user-icons.flaticon.com/54660/54660659/1633863864506.svg?token=exp=1633864779~hmac=0618a94ce86743fcca0aab2a2f0b64b2" />
       </Buttons>
@@ -33,7 +31,7 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: url(https://tesla-cdn.thron.com/delivery/public/thumbnail/tesla/9c6b5f01-494b-4764-9d64-364ff3749711/bvlatuR/std/1540x866/ModelSPlaid-2?lcid=2b084dd2-ade1-49ec-a470-45363112146c&v=33&dpr=125);
+  background-image: ${(props) => `url(${props.bagImg})`};
 `;
 
 const ItemText = styled.div`
