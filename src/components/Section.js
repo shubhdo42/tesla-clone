@@ -11,9 +11,11 @@ function Section({ title, desc, bgImg, leftbtntext, rightBtntext }) {
       <Buttons>
         <ButtonGroup>
           <LeftButton>{leftbtntext}</LeftButton>
-          <RightButton>{rightBtntext}</RightButton>
+          {rightBtntext && <RightButton>{rightBtntext}</RightButton>}
         </ButtonGroup>
-        <DownArrow src="https://cdn-user-icons.flaticon.com/54660/54660659/1633863864506.svg?token=exp=1633864779~hmac=0618a94ce86743fcca0aab2a2f0b64b2" />
+        {rightBtntext && (
+          <DownArrow src="https://cdn-user-icons.flaticon.com/54660/54660659/1633863864506.svg?token=exp=1633864779~hmac=0618a94ce86743fcca0aab2a2f0b64b2" />
+        )}
       </Buttons>
     </Wrap>
   );

@@ -33,6 +33,12 @@ function Home() {
         leftbtntext="Custom Order"
         rightBtntext="Existing Inventory"
       />
+      <Section
+        title="Accessories"
+        desc=""
+        leftbtntext="Shop Now"
+        bgImg="https://tesla-cdn.thron.com/delivery/public/thumbnail/tesla/e36cbe40-92e2-49cb-b991-92b6c7245677/bvlatuR/std/550x507/WallConnector_03?lcid=ad5c97cb-dd55-4343-a8d7-b0660a1be424&v=70&dpr=325"
+      ></Section>
     </Container>
   );
 }
