@@ -1,18 +1,25 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import Fade from "react-reveal/Fade";
 
 function Section({ title, desc, bgImg, leftbtntext, rightBtntext }) {
   return (
     <Wrap bagImg={bgImg}>
-      <ItemText>
-        <h1>{title}</h1>
-        <p>{desc}</p>
-      </ItemText>
+      <Fade bottom>
+        <ItemText>
+          <h1>{title}</h1>
+          <p>{desc}</p>
+        </ItemText>
+      </Fade>
+
       <Buttons>
-        <ButtonGroup>
-          <LeftButton>{leftbtntext}</LeftButton>
-          {rightBtntext && <RightButton>{rightBtntext}</RightButton>}
-        </ButtonGroup>
+        <Fade bottom>
+          <ButtonGroup>
+            <LeftButton>{leftbtntext}</LeftButton>
+            {rightBtntext && <RightButton>{rightBtntext}</RightButton>}
+          </ButtonGroup>
+        </Fade>
+
         {rightBtntext && (
           <DownArrow src="https://cdn-user-icons.flaticon.com/54660/54660659/1633863864506.svg?token=exp=1633864779~hmac=0618a94ce86743fcca0aab2a2f0b64b2" />
         )}
